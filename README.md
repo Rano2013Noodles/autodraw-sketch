@@ -16,3 +16,5 @@ We were testing it on Sketch 43.1, it might work on older versions too.
 A.I. Powerhouse provided by [autodraw.com](https://www.autodraw.com) and [A.I. Experiments](https://aiexperiments.withgoogle.com) by [Google](https://google.com).  
 
 Sketch plugin by [sympli.io](https://sympli.io)
+
+This is __**unofficial and experimental**__ integration.
