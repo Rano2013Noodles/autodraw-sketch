@@ -1,0 +1,25 @@
+{
+    "name": "AutoDraw",
+    "description" : "Unofficial AutoDraw plugin for Sketch. https://www.autodraw.com",
+    "author" : "Sketch plugin by https://sympli.io",
+    "authorEmail" : "contact@sympli.io",
+    "homepage": "https://github.com/sympli/autodraw-sketch",
+    "version" : "1.0.0",
+    "updateURL": "https://github.com/sympli/autodraw-sketch",
+    "identifier" : "io.sympli.sketch.autodraw",
+    "compatibleVersion": "3.3",
+    "bundleVersion": "1",
+    "commands" : [
+        {
+            "script" : "AutoDraw.cocoascript",
+            "shortcut" : "ctrl shift m",
+            "name" : "Autodraw",
+            "identifier" : "openPlugin"
+        }
+    ],
+    "menu" : {
+        "items" : [
+            "openPlugin"
+        ]
+    }
+}

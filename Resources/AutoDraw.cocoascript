@@ -1,0 +1,30 @@
+var loadFramework = function(pluginRoot) {
+    if (NSClassFromString('AutoDrawPlugin') == null) {
+        var mocha = [Mocha sharedRuntime];
+        log("Looking for framework at: " + pluginRoot )
+        return [mocha loadFrameworkWithName:"AutoDraw" inDirectory:pluginRoot];
+    } else {
+        log("Framework is already loaded");
+        return true;
+    }
+}
+
+var onRun = function(context) {
+    var doc = context.document;
+
+    try {
+        var pluginRoot = context.scriptPath.stringByDeletingLastPathComponent();
+
+        var loadFrameworkResult = loadFramework(pluginRoot);
+        log("Framework loaded: " + loadFrameworkResult);
+
+        if (loadFrameworkResult) {
+            var sketchPluginDemo = [[AutoDrawPlugin alloc] init];
+            [sketchPluginDemo processDocument:doc];
+        }
+    } catch (err) {
+        doc.showMessage("Unknown error");
+        log(err);
+    }
+}
+
